@@ -26,7 +26,8 @@ const App = () => {
       <TooltipProvider>
         <Toaster />
         <Sonner />
-        <BrowserRouter>
+        {/* Set the basename here for GitHub Pages */}
+        <BrowserRouter basename="/blog-platform">
           <Routes>
             <Route
               path="/"
@@ -57,7 +58,7 @@ const App = () => {
             <Route
               path="/signup"
               element={
-                isAuthenticated ? <Navigate to="/" /> : <Signup />
+                isAuthenticated ? <Navigate to="/login" /> : <Signup />
               }
             />
           </Routes>

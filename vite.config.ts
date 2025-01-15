@@ -18,4 +18,8 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  build: {
+    outDir: 'build'  // Default Vite output is 'dist', change to 'build' for consistency
+  },
+  base: '/blog-platform/',
 }));
